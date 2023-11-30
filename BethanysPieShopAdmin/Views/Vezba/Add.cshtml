@@ -1,0 +1,43 @@
+﻿@model VezbaAddViewModel
+
+<h2>Dodaj vežbu</h2>
+<hr />
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <p class="text-danger">@ViewData["ErrorMessage"]</p>
+}
+
+
+<form method="post" asp-controller="Vezba" asp-action="Add">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Vezba.VezbaName" class="form-label"></label>
+        <input asp-for="Vezba.VezbaName" class="form-control" />
+        <span asp-validation-for="Vezba.VezbaName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Vezba.VezbaDescription" class="form-label"></label>
+        <textarea asp-for="Vezba.VezbaDescription" class="form-control" rows="5" cols="50" style="resize: none;"></textarea>
+        <span asp-validation-for="Vezba.VezbaDescription" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Vezba.Rekviziti" class="form-label"></label>
+        <textarea asp-for="Vezba.Rekviziti" class="form-control" rows="5" cols="50" style="resize: none;"></textarea>
+        <span asp-validation-for="Vezba.Rekviziti" class="text-danger"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="Treninzi" class="form-label"></label>
+        <select asp-for="Vezba.TreningId" asp-items="Model.Treninzi"></select>
+        <span asp-validation-for="Treninzi" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Add Vezba" class="btn btn-primary" />
+</form>
+<div>
+    <a asp-controller="Vezba" asp-action="Index">Nazad</a>
+</div>

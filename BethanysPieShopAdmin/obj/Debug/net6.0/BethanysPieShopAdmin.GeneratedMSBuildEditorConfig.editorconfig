@@ -9,51 +9,99 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BethanysPieShopAdmin
 build_property.RootNamespace = BethanysPieShopAdmin
-build_property.ProjectDir = C:\Users\acika\Desktop\FLATLINE_DOMACI\BethanysPieShopAdmin\
+build_property.ProjectDir = C:\Users\mlade\Desktop\FLATLINE_DOMACI\BethanysPieShopAdmin\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\acika\Desktop\FLATLINE_DOMACI\BethanysPieShopAdmin
+build_property.MSBuildProjectDirectory = C:\Users\mlade\Desktop\FLATLINE_DOMACI\BethanysPieShopAdmin
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Home/Index.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Order/Details.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Order/Index.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Shared/Error.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/Index.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlbmluZ1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/BulkEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlbmluZ1xCdWxrRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlbmluZ1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlbmluZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlbmluZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Trening/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlbmluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Index.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/_ViewImports.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/IndexPaging.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcSW5kZXhQYWdpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/IndexPagingSorting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcSW5kZXhQYWdpbmdTb3J0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Vezba/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV6YmFcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/_ViewStart.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acika/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Shared/_Layout.cshtml]
+[C:/Users/mlade/Desktop/FLATLINE_DOMACI/BethanysPieShopAdmin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-p1fx6oeasa

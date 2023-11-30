@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acika\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {}
+    "C:\\Users\\mlade\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acika\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {
+    "C:\\Users\\mlade\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acika\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+        "projectUniqueName": "C:\\Users\\mlade\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
         "projectName": "BethanysPieShopAdmin",
-        "projectPath": "C:\\Users\\acika\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
-        "packagesPath": "C:\\Users\\acika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acika\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\obj\\",
+        "projectPath": "C:\\Users\\mlade\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+        "packagesPath": "C:\\Users\\mlade\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mlade\\Desktop\\FLATLINE_DOMACI\\BethanysPieShopAdmin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mlade\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

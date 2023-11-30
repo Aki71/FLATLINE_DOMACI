@@ -1,0 +1,24 @@
+﻿@model Category
+
+<h2 style="padding-top:75px;">Create a new category</h2>
+<hr />
+
+<form method="post" asp-controller="Trening" asp-action="Add">
+    
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Ime</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Opis</label>
+        <textarea asp-for="Description" class="form-control" rows="5" cols="50" style="resize: none; background-color:white;" ></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Dodaj trening" class="btn btn-primary" />
+</form>
+<br>
+<div>
+    <a asp-controller="Trening" asp-action="Index">Nazad</a>
+</div>
