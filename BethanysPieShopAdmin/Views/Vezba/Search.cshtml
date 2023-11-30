@@ -1,12 +1,12 @@
 ﻿@model VezbaSearchViewModel
 
-<h2>Search pies</h2>
+<h2>Pretraži vežbe</h2>
 <hr />
 
-<form asp-controller="Pie" asp-action="Search" method="get">
+<form asp-controller="Vezba" asp-action="Search" method="get">
     <div class="mb-3">
-        <label class="form-label">Category</label>
-        <select asp-for="SearchCategory" asp-items="Model.Categories" class="form-control">
+        <label class="form-label">Trening</label>
+        <select asp-for="SearchTrening" asp-items="Model.Treninzi" class="form-control">
             <option value="">All</option>
         </select>
     </div>
@@ -17,7 +17,7 @@
     <input type="submit" value="Filter" class="btn btn-primary" />
 </form>
 
-@if (!Model.Pies.Any())
+@if (!Model.Vezbe.Any())
 {
     <p>No results</p>
 }
@@ -37,17 +37,17 @@ else
             </th>
             <th>Actions</th>
         </tr>
-        @foreach (var pie in Model.Pies)
+        @foreach (var vezba in Model.Vezbe)
         {
 
             <tr>
-                <td>@pie.PieId</td>
-                <td>@pie.Name</td>
-                <td>@pie.Price</td>
+                <td>@vezba.VezbaId</td>
+                <td>@vezba.VezbaName</td>
+                <td>@vezba.Rekviziti</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@pie.PieId">Details</a>
-                    <a asp-action="Edit" asp-route-id="@pie.PieId">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@pie.PieId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@vezba.VezbaId">Details</a>
+                    <a asp-action="Edit" asp-route-id="@vezba.VezbaId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@vezba.VezbaId">Delete</a>
                 </td>
             </tr>
         }

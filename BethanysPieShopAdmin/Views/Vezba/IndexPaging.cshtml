@@ -1,6 +1,7 @@
-﻿@using BethanysPieShopAdmin.Utilities;
+﻿@using BethanysPieShopAdmin.Data.Models
+@using BethanysPieShopAdmin.Utilities;
 
-@model PaginatedList<Pie>
+@model PaginatedList<Vezba>
 
 <h2>Pies</h2>
 <hr />
@@ -25,17 +26,17 @@ else
             </th>
             <th>Actions</th>
         </tr>
-        @foreach (var pie in Model)
+        @foreach (var vezba in Model)
         {
 
             <tr>
-                <td>@pie.PieId</td>
-                <td>@pie.Name</td>
-                <td>@pie.Price</td>
+                <td>@vezba.VezbaId</td>
+                <td>@vezba.VezbaName</td>
+                <td>@vezba.Rekviziti</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@pie.PieId">Details</a>
-                    <a asp-action="Edit" asp-route-id="@pie.PieId">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@pie.PieId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@vezba.VezbaId">Details</a>
+                    <a asp-action="Edit" asp-route-id="@vezba.VezbaId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@vezba.VezbaId">Delete</a>
                 </td>
             </tr>
         }
