@@ -1,0 +1,102 @@
+﻿@model OrderIndexViewModel
+<form onsubmit="return poruka()">
+    <label for="firstName">Ime:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Prezime:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label>
+        <input type="radio" name="gender" value="male"> Male
+    </label>
+    <label>
+        <input type="radio" name="gender" value="female"> Female
+    </label>
+    <label>
+        <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter
+    </label>
+
+    <button type="submit">Show Alert</button>
+</form>
+
+<script type="text/javascript">
+    function poruka() {
+   
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+
+        if (!firstName || !lastName) {
+            alert('Molimo Vas da unesete Ime i Prezime.');
+            return false;
+        }
+
+
+        showAlert(firstName, lastName);
+
+    
+        return false;
+    }
+
+    function showAlert(firstName, lastName) {
+        const genderOptions = document.getElementsByName('gender');
+        let selectedGender = '';
+        for (const option of genderOptions) {
+            if (option.checked) {
+                selectedGender = option.value;
+                break;
+            }
+        }
+
+      
+        const isSubscribed = document.getElementsByName('subscribe')[0].checked;
+
+     
+        let alertMessage = 'Ime: ' + firstName +
+            '\nPrezime: ' + lastName +
+            '\nSelected Gender: ' + (selectedGender || 'Not specified') +
+            '\nSubscribed to newsletter: ' + (isSubscribed ? 'Yes' : 'No');
+
+        alert(alertMessage);
+    }
+</script>
+
+
+<style>
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:100vH;
+        background-color:white;
+    }
+
+    form{
+        width:400px;
+        height:800pxx;
+        background-color:wheat;
+        border-radius:30px;
+        padding:20px;
+       text-align:center;
+       margin-left:450px;
+    }
+
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input, button {
+        width: 75%%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 6px;
+        }
+</style>
