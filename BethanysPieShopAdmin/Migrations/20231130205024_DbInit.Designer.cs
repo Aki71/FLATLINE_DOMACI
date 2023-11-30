@@ -4,16 +4,18 @@ using BethanysPieShopAdmin.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace BethanysPieShopAdmin.Data.Migrations
+namespace BethanysPieShopAdmin.Migrations
 {
     [DbContext(typeof(TreningDbContext))]
-    partial class TreningDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231130205024_DbInit")]
+    partial class DbInit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,6 +62,9 @@ namespace BethanysPieShopAdmin.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TreningId")
+                        .HasColumnType("int");
+
                     b.Property<string>("VezbaDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -70,7 +75,25 @@ namespace BethanysPieShopAdmin.Data.Migrations
 
                     b.HasKey("VezbaId");
 
+                    b.HasIndex("TreningId");
+
                     b.ToTable("Vezbe", (string)null);
+                });
+
+            modelBuilder.Entity("BethanysPieShopAdmin.Data.Models.Vezba", b =>
+                {
+                    b.HasOne("BethanysPieShopAdmin.Data.Models.Trening", "Trening")
+                        .WithMany("Vezbas")
+                        .HasForeignKey("TreningId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Trening");
+                });
+
+            modelBuilder.Entity("BethanysPieShopAdmin.Data.Models.Trening", b =>
+                {
+                    b.Navigation("Vezbas");
                 });
 #pragma warning restore 612, 618
         }

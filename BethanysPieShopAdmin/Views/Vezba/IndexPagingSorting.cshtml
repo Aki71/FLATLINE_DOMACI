@@ -1,10 +1,7 @@
 ﻿@using BethanysPieShopAdmin.Utilities;
-@*@model IEnumerable<Pie>
-*@
+@model PaginatedList<Vezba>
 
-@model PaginatedList<Pie>
-
-<h2>Pies</h2>
+<h2>Vežbe</h2>
 <hr />
 
 @if (!Model.Any())
@@ -19,24 +16,24 @@ else
                 <a asp-action="IndexPagingSorting" asp-route-sortBy="@ViewData["IdSortParam"]">Id</a>
             </th>
             <th>
-                <a asp-action="IndexPagingSorting" asp-route-sortBy="@ViewData["NameSortParam"]">Name</a>
+                <a asp-action="IndexPagingSorting" asp-route-sortBy="@ViewData["NameSortParam"]">Vežba</a>
             </th>
             <th>
-                <a asp-action="IndexPagingSorting" asp-route-sortBy="@ViewData["PriceSortParam"]">Price</a>
+                <a asp-action="IndexPagingSorting" asp-route-sortBy="@ViewData["PriceSortParam"]">Rekviziti</a>
             </th>
             <th>Actions</th>
         </tr>
-        @foreach (var pie in Model)
+        @foreach (var vezba in Model)
         {
 
             <tr>
-                <td>@pie.PieId</td>
-                <td>@pie.Name</td>
-                <td>@pie.Price</td>
+                <td>@vezba.VezbaId</td>
+                <td>@vezba.VezbaName</td>
+                <td>@vezba.Rekviziti</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@pie.PieId">Details</a>
-                    <a asp-action="Edit" asp-route-id="@pie.PieId">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@pie.PieId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@vezba.VezbaId">Detalji</a>
+                    <a asp-action="Edit" asp-route-id="@vezba.VezbaId">Izmeni</a>
+                    <a asp-action="Delete" asp-route-id="@vezba.VezbaId">Izbriši</a>
 
                 </td>
             </tr>
@@ -65,5 +62,5 @@ else
 
 
 <p>
-    <a class="btn btn-primary" asp-action="Add">Add new pie</a>
+    <a class="btn btn-primary" asp-action="Add">DOdaj vežbu</a>
 </p>

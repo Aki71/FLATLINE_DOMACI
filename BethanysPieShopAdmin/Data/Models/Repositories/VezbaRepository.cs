@@ -1,4 +1,4 @@
-﻿using BethanysPieShopAdmin.Models;
+﻿
 using Microsoft.EntityFrameworkCore;
 
 namespace BethanysPieShopAdmin.Data.Models.Repositories
@@ -17,7 +17,7 @@ namespace BethanysPieShopAdmin.Data.Models.Repositories
         }
         public async Task<Vezba?> GetVezbaByIdAsync(int vezbaId)
         {
-            return await _treningDbContext.Vezba.Include(p => p.Rekviziti).Include(p => p.Trening).AsNoTracking().FirstOrDefaultAsync(p => p.VezbaId == vezbaId);
+            return await _treningDbContext.Vezba.Include(p => p.Trening).AsNoTracking().FirstOrDefaultAsync(p => p.VezbaId == vezbaId);
         }
         public async Task<int> GetAllVezbaCountAsync()
         {

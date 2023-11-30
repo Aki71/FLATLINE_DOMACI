@@ -1,6 +1,6 @@
 ﻿@model VezbaSearchViewModel
 
-<h2>Pretraži vežbe</h2>
+<h2 style="padding-top:70px;">Petraži vežbe</h2>
 <hr />
 
 <form asp-controller="Vezba" asp-action="Search" method="get">
@@ -45,9 +45,9 @@ else
                 <td>@vezba.VezbaName</td>
                 <td>@vezba.Rekviziti</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@vezba.VezbaId">Details</a>
-                    <a asp-action="Edit" asp-route-id="@vezba.VezbaId">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@vezba.VezbaId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@vezba.VezbaId">Detalji</a>
+                    <a asp-action="Edit" asp-route-id="@vezba.VezbaId">Izmeni</a>
+                    <a asp-action="Delete" asp-route-id="@vezba.VezbaId">Izbriši</a>
                 </td>
             </tr>
         }

@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BethanysPieShopAdmin.Data.Migrations
+namespace BethanysPieShopAdmin.Migrations
 {
-    public partial class InitTreningDb1 : Migration
+    public partial class DbInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,21 +33,33 @@ namespace BethanysPieShopAdmin.Data.Migrations
                     PlanId = table.Column<int>(type: "int", nullable: false),
                     VezbaName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     VezbaDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Rekviziti = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Rekviziti = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TreningId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Vezbe", x => x.VezbaId);
+                    table.ForeignKey(
+                        name: "FK_Vezbe_Treninzi_TreningId",
+                        column: x => x.TreningId,
+                        principalTable: "Treninzi",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Vezbe_TreningId",
+                table: "Vezbe",
+                column: "TreningId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Treninzi");
+                name: "Vezbe");
 
             migrationBuilder.DropTable(
-                name: "Vezbe");
+                name: "Treninzi");
         }
     }
 }

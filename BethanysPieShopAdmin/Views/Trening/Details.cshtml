@@ -1,15 +1,16 @@
-﻿@model Category
+﻿@model Trening
+<br></br>
+<h2 >Detalji @Model.Name</h2>
 
-<h2>Details for category @Model.Name</h2>
 <hr />
 
 <div>
     <dl class="row">
         <dt class="col-sm-2">
-            <label asp-for="CategoryId"></label>
+            <label asp-for="Id"></label>
         </dt>
         <dd class="col-sm-10">
-            @Model.CategoryId
+            @Model.Id
         </dd>
         <dt class="col-sm-2">
             <label asp-for="Name"></label>
@@ -18,34 +19,22 @@
             @Model.Name
         </dd>
         <dt class="col-sm-2">
-            <label asp-for="Description"></label>
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Description
-        </dd>
-        <dt class="col-sm-2">
-            <label asp-for="DateAdded"></label>
-        </dt>
-        <dd class="col-sm-10">
-            @Model.DateAdded.Value.ToShortDateString()
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Pies)
+            @Html.DisplayNameFor(model => model.Vezbe)
         </dt>
         <dd class="col-sm-10">
             <table class="table">
                 <tr>
-                    <th>Pie name</th>
-                    <th>Price</th>
+                    <th>Vezba</th>
+                    <th>Rekviziti</th>
                 </tr>
-                @foreach (var pie in Model.Pies)
+                @foreach (var vezba in Model.Vezbe)
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(category => pie.Name)
+                            @Html.DisplayFor(Trening => vezba.VezbaName)
                         </td>
                         <td>
-                            @Html.DisplayFor(category => pie.Price)
+                            @Html.DisplayFor(Trening => vezba.Rekviziti)
                         </td>
                     </tr>
                 }

@@ -1,24 +1,19 @@
-﻿@model Category
-
-<h2>Update category @Model.Name</h2>
+﻿@model Trening
+<br></br>
+<h2 >Izmeni trening @Model.Name</h2>
 <hr />
 
-<form method="post" asp-controller="Category" asp-action="Edit">
+<form method="post" asp-controller="Trening" asp-action="Edit">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="CategoryId" />
+    <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">
         <label asp-for="Name" class="form-label"></label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
-    <div class="mb-3">
-        <label asp-for="Description" class="form-label"></label>
-        <textarea asp-for="Description" class="form-control" rows="5" cols="50" style="resize: none;"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <input type="submit" value="Update category" class="btn btn-primary" />
+    <input type="submit" value="Izmeni trening" class="btn btn-primary" />
 </form>
 <div>
-    <a asp-controller="Category" asp-action="Index">Back to overview</a>
+    <a asp-controller="Trening" asp-action="Index">Nazad</a>
 </div>

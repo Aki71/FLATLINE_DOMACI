@@ -1,4 +1,4 @@
-﻿using BethanysPieShopAdmin.Models;
+﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 namespace BethanysPieShopAdmin.Data.Models.Repositories
@@ -14,7 +14,7 @@ namespace BethanysPieShopAdmin.Data.Models.Repositories
             this.treningDbContext = treningDbContext;
             _MemoryCache = memoryCache;
         }
-        public IEnumerable<Trening> GetAllTrenings() 
+        public IEnumerable<Trening> GetAllTrenings()
         {
             return treningDbContext.Trening.AsNoTracking().OrderBy(p => p.Id);
         }
@@ -22,19 +22,18 @@ namespace BethanysPieShopAdmin.Data.Models.Repositories
         {
             List<Trening> allTrening = null;
 
-            if (!_MemoryCache.TryGetValue(AllTreningsCache, out allTrening) || !(allTrening is List<Trening>))
-            {
-                allTrening = await treningDbContext.Trening.AsNoTracking().OrderBy(c => c.Id).ToListAsync();
-                var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(60));
 
-                _MemoryCache.Set(AllTreningsCache, allTrening, cacheEntryOptions);
-            }
+            allTrening = await treningDbContext.Trening.AsNoTracking().OrderBy(c => c.Id).ToListAsync();
+            var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(60));
+
+
+
 
             return allTrening;
         }
         public async Task<Trening?> GetTreningByIdAsync(int id)
         {
-            return await treningDbContext.Trening.AsNoTracking().Include(p => p.Vezbas).FirstOrDefaultAsync(c => c.Id == id);
+            return await treningDbContext.Trening.AsNoTracking().Include(p => p.Vezbe).FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<int> AddTreningAsync(Trening trening)

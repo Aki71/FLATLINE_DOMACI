@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BethanysPieShopAdmin.Models;
 using BethanysPieShopAdmin.Data.Models.Repositories;
 using BethanysPieShopAdmin.Utilities;
 using BethanysPieShopAdmin.ViewModels;
@@ -23,7 +22,15 @@ namespace BethanysPieShopAdmin.Data.Controllers
         public async Task<IActionResult> Index()
         {
             var vezbe = await _vezbaRepository.GetAllVezbaAsync();
-            return View(vezbe);
+            VezbaSearchViewModel model = new VezbaSearchViewModel
+            {
+                Vezbe = vezbe,
+                SearchTrening = null,
+                Treninzi = new List<SelectListItem>(),
+                SearchQuery = string.Empty
+            };
+
+            return View(model);
         }
         public async Task<IActionResult> IndexPaging(int? pageNumber)
         {
@@ -114,11 +121,12 @@ namespace BethanysPieShopAdmin.Data.Controllers
 
             var allTrening = await _treningRepository.GetAllTreningAsync();
 
-            IEnumerable<SelectListItem> selectListItems = new SelectList(allTrening, "TreningId", "Name", null);
+
+            List<SelectListItem> x1 = allTrening.Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.Name }).ToList();
 
             var selectedVezba = await _vezbaRepository.GetVezbaByIdAsync(id.Value);
 
-            VezbaEditViewModel vezbaEditViewModel = new() { Treninzi = selectListItems, Vezba = selectedVezba };
+            VezbaEditViewModel vezbaEditViewModel = new() { Treninzi = x1, Vezba = selectedVezba };
             return View(vezbaEditViewModel);
         }
 
@@ -150,6 +158,17 @@ namespace BethanysPieShopAdmin.Data.Controllers
 
             return View(vezbaEditViewModel);
         }
+
+
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var selectedVezba = await _vezbaRepository.GetVezbaByIdAsync(id);
+
+            return View(selectedVezba);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> DeleteConfirmed(int? vezbaId)
         {

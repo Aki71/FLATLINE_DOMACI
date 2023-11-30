@@ -1,6 +1,6 @@
-﻿@model Pie
+﻿@model Vezba
 
-<h2>Ukloni vežbu @Model?.Name</h2>
+<h2 style="padding-top:70px;">Ukloni vežbu @Model?.VezbaName</h2>
 <hr />
 
 @if (ViewData["ErrorMessage"] != null)
@@ -11,33 +11,27 @@
 <div>
     <dl class="row">
         <dt class="col-sm-2">
-            <label asp-for="PieId"></label>
+            <label asp-for="VezbaId"></label>
         </dt>
         <dd class="col-sm-10">
-            @Model?.PieId
+            @Model?.VezbaId
         </dd>
         <dt class="col-sm-2">
-            <label asp-for="Name"></label>
+            <label asp-for="VezbaName"></label>
         </dt>
         <dd class="col-sm-10">
-            @Model?.Name
-        </dd>
-        <dt class="col-sm-2">
-            <label asp-for="ShortDescription"></label>
-        </dt>
-        <dd class="col-sm-10">
-            @Model?.ShortDescription
+            @Model.VezbaName
         </dd>
 
     </dl>
 </div>
 
 <form method="post" asp-action="DeleteConfirmed">
-    <input type="hidden" asp-for="PieId" />
-    <input type="submit" value="Delete pie" class="btn btn-danger" onclick="javascript: return confirm('Da li želite da ižbrišete vežbu?');" />
+    <input type="hidden" asp-for="VezbaId" />
+    <input type="submit" value="Izbriši vežbu" class="btn btn-danger" onclick="javascript: return confirm('Da li želite da ižbrišete vežbu?');" />
 </form>
 
 <div>
-    <a asp-controller="Pie" asp-action="Index">Nazad</a>
+    <a asp-controller="Vezba" asp-action="Index">Nazad</a>
 </div>
 

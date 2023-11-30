@@ -1,6 +1,6 @@
 ﻿@model VezbaEditViewModel
 
-<h2>Izmeni vežbu @Model.Vezba.VezbaName</h2>
+<h2 style="padding-top:70px;">Izmeni vežbu @Model.Vezba.VezbaName</h2>
 <hr />
 
 <form method="post" asp-controller="Vezba" asp-action="Edit">
@@ -31,7 +31,7 @@
         <span asp-validation-for="Treninzi" class="text-danger"></span>
     </div>
 
-    <input type="submit" value="Update Vezba" class="btn btn-primary" />
+    <input type="submit" value="Izmeni Vezba" class="btn btn-primary" />
 </form>
 
 <div>

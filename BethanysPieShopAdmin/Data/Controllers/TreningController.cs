@@ -2,9 +2,7 @@
 using BethanysPieShopAdmin.Data.Models;
 using BethanysPieShopAdmin.Data.Models.Repositories;
 using BethanysPieShopAdmin.ViewModels;
-using Microsoft.AspNetCore.Mvc;
 using System.Numerics;
-using BethanysPieShopAdmin.Models;
 
 namespace BethanysPieShopAdmin.Data.Controllers
 {
@@ -32,13 +30,15 @@ namespace BethanysPieShopAdmin.Data.Controllers
                 return NotFound();
             }
 
-            var selectedTrening= await _treningRepository.GetTreningByIdAsync(id.Value);
+            var selectedTrening = await _treningRepository.GetTreningByIdAsync(id.Value);
             return View(selectedTrening);
         }
         public IActionResult Add()
         {
             return View();
         }
+
+
         [HttpPost]
         public async Task<IActionResult> Add([Bind("Name,Description,DateAdded")] Trening trening)
         {
@@ -52,7 +52,7 @@ namespace BethanysPieShopAdmin.Data.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", $"Adding the category failed, please try again! Error: {ex.Message}");
+                ModelState.AddModelError("", $"Trening nije dodat, pokusajte ponovo! Error: {ex.Message}");
             }
 
             return View(trening);
@@ -85,11 +85,13 @@ namespace BethanysPieShopAdmin.Data.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", $"Updating the category failed, please try again! Error: {ex.Message}");
+                ModelState.AddModelError("", $"Ne uspešno izmenjivanje podataka! Error: {ex.Message}");
             }
 
             return View(trening);
         }
+
+        
         public async Task<IActionResult> Delete(int id)
         {
             var selectedTrening = await _treningRepository.GetTreningByIdAsync(id);
@@ -98,27 +100,27 @@ namespace BethanysPieShopAdmin.Data.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(int? TreningId)
+        public async Task<IActionResult> Delete([FromForm] int? id)
         {
-            if (TreningId == null)
+            if (id == null)
             {
-                ViewData["ErrorMessage"] = "Deleting the category failed, invalid ID!";
+                ViewData["ErrorMessage"] = "Neispravan ID!";
                 return View();
             }
 
             try
             {
-                await _treningRepository.DeleteTreningAsync(TreningId.Value);
-                TempData["CategoryDeleted"] = "Category deleted successfully!";
+                await _treningRepository.DeleteTreningAsync(id.Value);
+                TempData["TreningDeleted"] = "Trening je uspešno izbridsan!";
 
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                ViewData["ErrorMessage"] = $"Deleting the category failed, please try again! Error: {ex.Message}";
+                ViewData["ErrorMessage"] = $"Trening nije izbrisan molim Vas pokusajte ponovo! Error: {ex.Message}";
             }
 
-            var selectedTrening = await _treningRepository.GetTreningByIdAsync(TreningId.Value);
+            var selectedTrening = await _treningRepository.GetTreningByIdAsync(id.Value);
             return View(selectedTrening);
 
         }
